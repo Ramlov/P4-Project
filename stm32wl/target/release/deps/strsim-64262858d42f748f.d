@@ -1,0 +1,7 @@
+C:\Users\marcu\OneDrive\Dokumenter\GitHub\P4-Project\lora-rs\examples\stm32wl\target\release\deps\libstrsim-64262858d42f748f.rmeta: C:\Users\marcu\.cargo\registry\src\index.crates.io-6f17d22bba15001f\strsim-0.10.0\src\lib.rs
+
+C:\Users\marcu\OneDrive\Dokumenter\GitHub\P4-Project\lora-rs\examples\stm32wl\target\release\deps\libstrsim-64262858d42f748f.rlib: C:\Users\marcu\.cargo\registry\src\index.crates.io-6f17d22bba15001f\strsim-0.10.0\src\lib.rs
+
+C:\Users\marcu\OneDrive\Dokumenter\GitHub\P4-Project\lora-rs\examples\stm32wl\target\release\deps\strsim-64262858d42f748f.d: C:\Users\marcu\.cargo\registry\src\index.crates.io-6f17d22bba15001f\strsim-0.10.0\src\lib.rs
+
+C:\Users\marcu\.cargo\registry\src\index.crates.io-6f17d22bba15001f\strsim-0.10.0\src\lib.rs:

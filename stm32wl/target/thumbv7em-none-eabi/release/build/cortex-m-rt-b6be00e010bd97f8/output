@@ -1,0 +1,5 @@
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv7m
+cargo:rustc-link-search=C:\Users\marcu\OneDrive\Dokumenter\GitHub\P4-Project\lora-rs\examples\stm32wl\target\thumbv7em-none-eabi\release\build\cortex-m-rt-b6be00e010bd97f8\out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in
