@@ -22,4 +22,4 @@ when checking if all files in /src/bin/ will compile:
 
 When checking single file in /src/bin/:
 
-> cargo check --bin <FILENAME>
+> cargo check --bin <\FILENAME>
