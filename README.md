@@ -16,10 +16,14 @@ When uploading the main code to the wio E5 mini:
 
 > cargo run -r --bin main
 
-when checking if all files in /src/bin/ will compile:
+When checking if all files in /src/bin/ will compile:
 
 > cargo check
 
 When checking single file in /src/bin/:
 
 > cargo check --bin filename        <-- excluding .rs
+
+When compiling and building file:
+
+> cargo build --bin filename        (add -r flag if building for 'release'. Will compress and optimize)
