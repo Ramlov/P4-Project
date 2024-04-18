@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.cargo.target": "thumbv7em-none-eabi",
+    "rust-analyzer.check.allTargets": false,
+    // "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],  // comment in if this applies (https://www.reddit.com/r/rust/comments/vj2ghz/suddenly_proc_macro_main_not_expanded_proc_macro/)
+  }

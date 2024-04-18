@@ -1,0 +1,10 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# replace your chip as listed in `probe-rs chip list`
+runner = "probe-rs run --chip STM32WLE5JCIx"
+
+[build]
+target = "thumbv7em-none-eabi"
+
+# change to "info" or other type in order to switch between levels of defmt to display
+[env]
+DEFMT_LOG = "trace"
