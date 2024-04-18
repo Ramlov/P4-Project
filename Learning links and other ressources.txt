@@ -1,0 +1,4 @@
+OOP in rust (traits, structs, etc.):
+https://stevedonovan.github.io/rust-gentle-intro/object-orientation.html
+
+

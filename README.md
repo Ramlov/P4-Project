@@ -12,6 +12,8 @@ Our Wio E5 mini is a build around a STM32WLE5JCixx. Alter the stm32wle5jc to you
 
 
 ## Useful Cargo commands:
+Make sure to call these with the working directory being /iot-device/ in order for cargo to be able to find the 'Cargo.toml' file.
+
 When uploading the main code to the wio E5 mini:
 
 > cargo run -r --bin main
@@ -22,8 +24,10 @@ When checking if all files in /src/bin/ will compile:
 
 When checking single file in /src/bin/:
 
-> cargo check --bin filename        <-- excluding .rs
+> cargo check --bin filename        (excluding .rs)
 
 When compiling and building file:
 
 > cargo build --bin filename        (add -r flag if building for 'release'. Will compress and optimize)
+
+Using 'cargo run' will build and then upload the code.
