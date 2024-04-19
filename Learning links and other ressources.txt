@@ -1,4 +1,12 @@
+ === STM32WLE5JC specific ===
+Datasheet:
+https://www.st.com/resource/en/datasheet/stm32wle5c8.pdf
+
+
+ === Rust specific ===
 OOP in rust (traits, structs, etc.):
 https://stevedonovan.github.io/rust-gentle-intro/object-orientation.html
 
+
+ === Misc ===
 
