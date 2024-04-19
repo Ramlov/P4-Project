@@ -8,13 +8,6 @@ use {defmt_rtt as _, panic_probe as _};
 
 
 // traits (think of them as interfaces from java)
-trait DM {
-    fn get_bitches();
-
-    fn get_more_bitches() {
-        defmt::info!("cry")
-    }
-}
 
 // The DataManager class
 struct DataManager {
