@@ -55,7 +55,7 @@ async fn main(_spawner: Spawner) {
             divr: Some(PllRDiv::DIV2), // sysclk 48Mhz clock (32 / 2 * 6 / 2)
         });
     }
-    let p = embassy_stm32::init(config);
+    let p = embassy_stm32::init(config); // Load config into stm32 chip and unpack peripherals (clock, pinout etc)
 
     // Set CTRL1 and CTRL3 for high-power transmission, while CTRL2 acts as an RF switch between tx and rx
     let _ctrl1 = Output::new(p.PC4.degrade(), Level::Low, Speed::High);
@@ -73,7 +73,7 @@ async fn main(_spawner: Spawner) {
         rx_boost: false,
     };
     let iv = Stm32wlInterfaceVariant::new(Irqs, None, Some(ctrl2)).unwrap();
-    let lora = LoRa::new(Sx126x::new(spi, iv, config), true, Delay).await.unwrap();
+    let lora = LoRa::new(Sx126x::new(spi, iv, config), true, Delay).await.unwrap(); //Make LoraChip object
 
     let radio: LorawanRadio<_, _, MAX_TX_POWER> = lora.into();
     let region: region::Configuration = region::Configuration::new(LORAWAN_REGION);
@@ -81,12 +81,12 @@ async fn main(_spawner: Spawner) {
 
     defmt::info!("Joining LoRaWAN network");
 
-    // TODO: Adjust the EUI and Keys according to your network credentials
+    //TODO: Adjust the EUI and Keys according to your network credentials
     let resp = device
         .join(&JoinMode::OTAA {
-            deveui: DevEui::from([0xFA, 0x2B, 0x60, 0x52, 0x20, 0xF1, 0xF7, 0x2C]), // LSB
+            deveui: DevEui::from([0xF1, 0x2B, 0x60, 0x52, 0x20, 0xF1, 0xF7, 0x2C]), // LSB
             appeui: AppEui::from([0xE4, 0x15, 0x00, 0x00, 0x00, 0x00, 0x7A, 0xBE]), // LSB
-            appkey: AppKey::from([0x66,0x86,0x05,0x16,0x96,0x0B,0x9D,0xDE,0xE5,0x4C,0x48,0xDA,0xD6,0x88,0x4F,0xC7]), // MSB
+            appkey: AppKey::from([0x57,0xB3,0x68,0xC5,0xD5,0x5D,0x9F,0xC5,0xDE,0xE1,0x42,0x78,0xB4,0x3F,0x4C,0x52]), // MSB
         })
         .await
         .unwrap();
