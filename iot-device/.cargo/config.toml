@@ -7,4 +7,4 @@ target = "thumbv7em-none-eabi"
 
 # change to "info" or other type in order to switch between levels of defmt to display
 [env]
-DEFMT_LOG = "trace"
+DEFMT_LOG = "info"

@@ -2,6 +2,7 @@
 #![no_std]
 #![no_main]
 
+
 use embassy_executor::Spawner;
 use embassy_stm32::gpio::{Level, Output, Pin, Speed};
 use embassy_stm32::rng::{self, Rng};

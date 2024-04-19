@@ -84,12 +84,15 @@ async fn main(_spawner: Spawner) {
     // TODO: Adjust the EUI and Keys according to your network credentials
     let resp = device
         .join(&JoinMode::OTAA {
-            deveui: DevEui::from([0, 0, 0, 0, 0, 0, 0, 0]),
-            appeui: AppEui::from([0, 0, 0, 0, 0, 0, 0, 0]),
-            appkey: AppKey::from([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
+            deveui: DevEui::from([0xFA, 0x2B, 0x60, 0x52, 0x20, 0xF1, 0xF7, 0x2C]), // LSB
+            appeui: AppEui::from([0xE4, 0x15, 0x00, 0x00, 0x00, 0x00, 0x7A, 0xBE]), // LSB
+            appkey: AppKey::from([0x66,0x86,0x05,0x16,0x96,0x0B,0x9D,0xDE,0xE5,0x4C,0x48,0xDA,0xD6,0x88,0x4F,0xC7]), // MSB
         })
         .await
         .unwrap();
 
     defmt::info!("LoRaWAN network joined: {:?}", resp);
+
+    let data: [u8; 2] = [0, 0];
+    device.send(&data, 1, false).await.unwrap();
 }
