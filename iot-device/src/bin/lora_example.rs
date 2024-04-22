@@ -18,7 +18,7 @@ use lora_phy::lorawan_radio::LorawanRadio;
 use lora_phy::sx126x::{self, Sx126x, Sx126xVariant, TcxoCtrlVoltage};
 use lora_phy::LoRa;
 
-use lorawan_device::async_device::{region, Device, EmbassyTimer, JoinMode};
+use lorawan_device::async_device::{SendResponse, region, Device, EmbassyTimer, JoinMode};
 use lorawan_device::default_crypto::DefaultFactory as Crypto;
 use lorawan_device::{AppEui, AppKey, DevEui};
 
@@ -93,6 +93,62 @@ async fn main(_spawner: Spawner) {
 
     defmt::info!("LoRaWAN network joined: {:?}", resp);
 
+
     let data: [u8; 2] = [0, 0];
-    device.send(&data, 1, false).await.unwrap();
+    let send_result = device.send(&data, 1, false).await;
+    
+    match send_result {
+        Ok(response) => {
+            defmt::info!("Response Received {:?}", response);
+    
+            //Receive Downlink
+            let downlink = device.take_downlink();
+            defmt::info!("Downlink Received {:?}", downlink);
+        },
+        Err(e) => {
+            defmt::error!("Error Sending Data {:?}", e);
+        }
+    }
+
+
+    // match send_result {
+    //     Ok(response) => {
+    //         defmt::info!("Response Received {:?}", response);
+    
+    //         //Receive Downlink
+    //         if let Some(downlink) = device.take_downlink() {
+    //             defmt::info!("Downlink Received {:?}", downlink);
+    //         } else {
+    //             defmt::info!("No Downlink Received");
+    //         }
+    //     },
+    //     Err(e) => {
+    //         defmt::error!("Error Sending Data {:?}", e);
+    //     }
+    // }
+
+    // match send_result {
+    //     Ok(response) => {
+    //         match response {
+    //             lorawan_device::async_device::SendResponse::DownlinkReceived(cnt) => {
+    //                 defmt::info!("Downlink Received {:?}", cnt);
+    //                 defmt::info!("Downlink data is available.");
+
+    //                 //Receive Downlink
+    //                 if let Some(downlink) = device.take_downlink() {
+    //                     defmt::info!("Downlink received: {:?}", downlink);
+    //                 } else {
+    //                     defmt::info!("Expected downlink, but none was taken.")
+    //                 }
+    //             }
+    //             _ => {
+    //                 // Data sent, no downlink
+    //                 defmt::info!("Data Sent, no downlink received.");
+    //             }
+    //         }
+    //     },
+    //     Err(e) => {
+    //         defmt::error!("Error sending data: {:?}", e);
+    //     }
+    // }
 }
