@@ -1,0 +1,17 @@
+{
+  "database": {
+    "host": "mysql100.unoeuro.com",
+    "dbname": "nexus_energy_dk_db",
+    "username": "nexus_energy_dk",
+    "password": "erA46bR5G2t3awzhm9xf"
+  },
+  "api": {
+    "HTTP_STATUS_OK": 200,
+    "client_id": "",
+    "client_secret": "",
+    "system_id": "",
+    "token_filename_get": "",
+    "token_filename_put": "",
+    "token_url_oauth": ""
+  }
+}
