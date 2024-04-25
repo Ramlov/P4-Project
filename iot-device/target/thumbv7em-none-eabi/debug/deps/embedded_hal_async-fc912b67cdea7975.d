@@ -1,0 +1,10 @@
+/Users/mathias/Desktop/P4-Project/iot-device/target/thumbv7em-none-eabi/debug/deps/libembedded_hal_async-fc912b67cdea7975.rmeta: /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/lib.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/delay.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/digital.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/i2c.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/spi.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/../README.md
+
+/Users/mathias/Desktop/P4-Project/iot-device/target/thumbv7em-none-eabi/debug/deps/embedded_hal_async-fc912b67cdea7975.d: /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/lib.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/delay.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/digital.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/i2c.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/spi.rs /Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/../README.md
+
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/lib.rs:
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/delay.rs:
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/digital.rs:
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/i2c.rs:
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/spi.rs:
+/Users/mathias/.cargo/registry/src/index.crates.io-6f17d22bba15001f/embedded-hal-async-1.0.0/src/../README.md:

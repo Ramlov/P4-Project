@@ -1,0 +1,5 @@
+cargo:rustc-link-lib=static=cortex-m
+cargo:rustc-link-search=/Users/mathias/Desktop/P4-Project/iot-device/target/thumbv7em-none-eabi/debug/build/cortex-m-134191489298af91/out
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv7m
+cargo:rustc-cfg=armv7em
